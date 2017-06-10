@@ -1,2 +1,2 @@
-# CPP-
+# CPP
 C++ Projects
