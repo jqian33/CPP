@@ -6,6 +6,7 @@
 #include "Board.h"
 #include "Node.h"
 #include <vector>
+#include <set>
 
 class Player
 {

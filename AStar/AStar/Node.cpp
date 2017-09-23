@@ -1,10 +1,13 @@
 #include "Node.h"
 #include <stdlib.h>
 
+// A node is used during path calculation.
+// It holds a reference to a board Grid and other states during the path finding calculation
 Node::Node(Grid* g) : grid(g) {
 	inClosed = false;
 	inOpen = false;
     parent = NULL;
+    cost = 0;
 }
 
 Node::Node(){

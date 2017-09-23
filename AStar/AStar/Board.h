@@ -8,6 +8,7 @@
 #include <queue>
 #include <functional>
 #include "Grid.h"
+#include "Node.h"
 
 class Board
 {
@@ -20,6 +21,7 @@ class Board
 		void MarkObstacle(int, int);
 		void MarkOccupied(int, int);
 		Grid* GetGrid(int x, int y);
+        void TracePath(Node*);
 
 	private:
 		int width;
