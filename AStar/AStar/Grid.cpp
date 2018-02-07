@@ -2,12 +2,14 @@
 
 Grid::Grid(int x, int y, bool isObstacle, bool isOccupied) : x(x), y(y), isObstacle(isObstacle), isOccupied(isOccupied)
 {
+    isOnPath = false;
 }
 
 Grid::Grid()
 {
-	isObstacle = false;
-	isOccupied = false;
+    isObstacle = false;
+    isOccupied = false;
+    isOnPath = false;
 }
 
 int Grid::GetX() const

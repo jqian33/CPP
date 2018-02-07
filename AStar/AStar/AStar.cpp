@@ -1,17 +1,14 @@
 // AStar.cpp : Defines the entry point for the console application.
 //
 
-#include "Board.h"
-#include "Grid.h"
-#include "Player.h"
-#include "Node.h"
+#include "AStar.h"
 
 using namespace std;
 
 int main()
 {
 	Board* board = new Board (10, 10);
-	board->MarkOccupied(0, 0);
+    board->MarkOccupied(0, 0);
     board->MarkObstacle(6, 6);
     board->MarkObstacle(6, 9);
 //    board->MarkObstacle(6, 8);
@@ -42,10 +39,10 @@ int main()
     
     board->Draw();
 
-	Player p1(board);
-	p1.SetPosition(0, 0);
-	p1.SetDestination(9, 8);
-	Node* pathNode = p1.FindPath();
+    Player p1(board);
+    p1.SetPosition(0, 0);
+    p1.SetDestination(9, 8);
+    Node* pathNode = p1.FindPath();
 
     board->TracePath(pathNode);
 	
