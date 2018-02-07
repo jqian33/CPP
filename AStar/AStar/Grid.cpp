@@ -1,13 +1,15 @@
 #include "Grid.h"
 
-Grid::Grid(int x, int y, bool isObstacle, bool occupied) : x(x), y(y), isObstacle(isObstacle), occupied(occupied) {
-
+Grid::Grid(int x, int y, bool isObstacle, bool isOccupied) : x(x), y(y), isObstacle(isObstacle), isOccupied(isOccupied)
+{
+    isOnPath = false;
 }
 
 Grid::Grid()
 {
-	isObstacle = false;
-	occupied = false;
+    isObstacle = false;
+    isOccupied = false;
+    isOnPath = false;
 }
 
 int Grid::GetX() const
@@ -25,9 +27,13 @@ bool Grid::IsObstacle() const
 	return isObstacle;
 }
 
-bool Grid::Occupied() const
+bool Grid::IsOccupied() const
 {
-	return occupied;
+	return isOccupied;
+}
+
+bool Grid::IsOnPath() const{
+    return isOnPath;
 }
 
 void Grid::MarkObstacle()
@@ -42,14 +48,21 @@ void Grid::RemoveObstacle()
 
 void Grid::MarkOccupied()
 {
-	occupied = true;
+	isOccupied = true;
 }
 
 void Grid::RemoveOccupied()
 {
-	occupied = false;
+	isOccupied = false;
 }
 
+void Grid::MarkOnPath() {
+    isOnPath = true;
+}
+
+void Grid::RemovePath() {
+    isOnPath = false;
+}
 
 
 

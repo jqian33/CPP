@@ -38,11 +38,11 @@ void Board::Draw() const {
 		{
 			Grid grid = board[i][j];
 			cout << "[";
-			if (!grid.Occupied() && !grid.IsObstacle())
+			if (!grid.IsOccupied() && !grid.IsObstacle() && !grid.IsOnPath())
 			{
 				cout << " ";
 			}
-			else if (grid.Occupied())
+			else if (grid.IsOccupied())
 			{
 				cout << "*";
 			}
@@ -50,6 +50,10 @@ void Board::Draw() const {
 			{
 				cout << "X";
 			}
+            else if (grid.IsOnPath())
+            {
+                cout << "-";
+            }
 			cout << "]";
 			if (j == columnCount - 1)
 			{
@@ -61,6 +65,15 @@ void Board::Draw() const {
 			}
 		}
 	}
+}
+
+void Board::TracePath(Node* node) {
+    cout << endl;
+    while (node != NULL) {
+        node->GetGrid()->MarkOnPath();
+        node = node->GetParent();
+    }
+    Draw();
 }
 
 void Board::MarkObstacle(int x, int y) {
