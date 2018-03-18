@@ -10,16 +10,6 @@
 
 FreeList::FreeList()
 {
-//    auto f = [](Header* a, Header* b)
-//    {
-//        if (a->GetSize() > b->GetSize()) {
-//            return true;
-//        }
-//        else
-//        {
-//            return false;
-//        }
-//    };
     fp = &FreeList::CompareSize;
     std::multiset<Header*, bool(FreeList::*)(Header*, Header*)> list(fp);
 }
