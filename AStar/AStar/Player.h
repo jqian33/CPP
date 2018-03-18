@@ -18,11 +18,11 @@ class Player
 		void SetDestination(int, int);
 		Grid* GetPosition();
 		std::vector<Node*> GetAdjacent(Node*);
-		static bool CompareCost(Node*, Node*);
 		Node* FindPath();
 
 	private:
 		std::vector<std::vector<Node> > map;
+        static bool CompareCost(Node*, Node*);
 		int mapWidth;
 		int mapLength;
 		Node* position;
