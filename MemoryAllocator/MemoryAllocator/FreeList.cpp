@@ -2,6 +2,9 @@
 //  FreeList.cpp
 //  MemoryAllocator
 //
+//  Implementation of free list using a multiset.
+//  This is mostly just a wrapper class for std::multiset.
+//
 //  Created by Jieyang Qian on 2/23/18.
 //  Copyright © 2018 Jieyang Qian. All rights reserved.
 //
@@ -10,19 +13,9 @@
 
 FreeList::FreeList()
 {
-    fp = &FreeList::CompareSize;
-    std::multiset<Header*, bool(FreeList::*)(Header*, Header*)> list(fp);
-}
-
-bool FreeList::CompareSize(Header* a, Header* b)
-{
-    if (a->GetSize() > b->GetSize()) {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    //fp = &FreeList::CompareSize;
+    //std::multiset<Header*, bool(FreeList::*)(const Header*, const Header*)> list(fp);
+    std::multiset<Header*, CustomCompare> list;
 }
 
 void FreeList::Push(Header* block)
