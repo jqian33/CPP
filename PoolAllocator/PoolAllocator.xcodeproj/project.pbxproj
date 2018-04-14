@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		332FEB482078F1DC00C56BDD /* TestUtility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332FEB422078F1DC00C56BDD /* TestUtility.cpp */; };
-		332FEB492078F1DC00C56BDD /* MyClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332FEB432078F1DC00C56BDD /* MyClass.cpp */; };
+		3322184020826371004D8FA1 /* TestUtility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3322183C20826370004D8FA1 /* TestUtility.cpp */; };
+		3322184120826371004D8FA1 /* MyClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3322183D20826371004D8FA1 /* MyClass.cpp */; };
 		332FEB4A2078F1DC00C56BDD /* PoolAllocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332FEB462078F1DC00C56BDD /* PoolAllocator.cpp */; };
 		332FEB4E2078F22400C56BDD /* MemoryAllocatorTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332FEB4C2078F22400C56BDD /* MemoryAllocatorTests.cpp */; };
 /* End PBXBuildFile section */
@@ -26,11 +26,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3322183C20826370004D8FA1 /* TestUtility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestUtility.cpp; path = UnitTests/TestUtility.cpp; sourceTree = SOURCE_ROOT; };
+		3322183D20826371004D8FA1 /* MyClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyClass.cpp; path = UnitTests/MyClass.cpp; sourceTree = SOURCE_ROOT; };
+		3322183E20826371004D8FA1 /* MyClass.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MyClass.hpp; path = UnitTests/MyClass.hpp; sourceTree = SOURCE_ROOT; };
+		3322183F20826371004D8FA1 /* TestUtility.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TestUtility.hpp; path = UnitTests/TestUtility.hpp; sourceTree = SOURCE_ROOT; };
 		332FEB382078F0BD00C56BDD /* PoolAllocator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PoolAllocator; sourceTree = BUILT_PRODUCTS_DIR; };
-		332FEB422078F1DC00C56BDD /* TestUtility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestUtility.cpp; sourceTree = "<group>"; };
-		332FEB432078F1DC00C56BDD /* MyClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyClass.cpp; sourceTree = "<group>"; };
-		332FEB442078F1DC00C56BDD /* TestUtility.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestUtility.hpp; sourceTree = "<group>"; };
-		332FEB452078F1DC00C56BDD /* MyClass.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MyClass.hpp; sourceTree = "<group>"; };
 		332FEB462078F1DC00C56BDD /* PoolAllocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PoolAllocator.cpp; sourceTree = "<group>"; };
 		332FEB472078F1DC00C56BDD /* PoolAllocator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PoolAllocator.hpp; sourceTree = "<group>"; };
 		332FEB4C2078F22400C56BDD /* MemoryAllocatorTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MemoryAllocatorTests.cpp; path = UnitTests/MemoryAllocatorTests.cpp; sourceTree = SOURCE_ROOT; };
@@ -77,11 +77,11 @@
 		332FEB4B2078F1F000C56BDD /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				332FEB432078F1DC00C56BDD /* MyClass.cpp */,
-				332FEB452078F1DC00C56BDD /* MyClass.hpp */,
+				3322183D20826371004D8FA1 /* MyClass.cpp */,
+				3322183E20826371004D8FA1 /* MyClass.hpp */,
+				3322183C20826370004D8FA1 /* TestUtility.cpp */,
+				3322183F20826371004D8FA1 /* TestUtility.hpp */,
 				332FEB4D2078F22400C56BDD /* catch.hpp */,
-				332FEB422078F1DC00C56BDD /* TestUtility.cpp */,
-				332FEB442078F1DC00C56BDD /* TestUtility.hpp */,
 				332FEB4C2078F22400C56BDD /* MemoryAllocatorTests.cpp */,
 			);
 			name = UnitTests;
@@ -145,10 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				332FEB482078F1DC00C56BDD /* TestUtility.cpp in Sources */,
+				3322184120826371004D8FA1 /* MyClass.cpp in Sources */,
+				3322184020826371004D8FA1 /* TestUtility.cpp in Sources */,
 				332FEB4A2078F1DC00C56BDD /* PoolAllocator.cpp in Sources */,
 				332FEB4E2078F22400C56BDD /* MemoryAllocatorTests.cpp in Sources */,
-				332FEB492078F1DC00C56BDD /* MyClass.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
