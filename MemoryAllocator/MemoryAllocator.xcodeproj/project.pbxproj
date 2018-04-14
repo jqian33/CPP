@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		331E40B5208057B9002B422A /* CustomCompare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 331E40B3208057B9002B422A /* CustomCompare.cpp */; };
+		331E40B820825359002B422A /* LargeClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 331E40B620825359002B422A /* LargeClass.cpp */; };
+		332FEB2E206FD40D00C56BDD /* TestUtility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332FEB2C206FD40D00C56BDD /* TestUtility.cpp */; };
 		333067602053686500C6481B /* MemoryAllocatorTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3330675F2053686500C6481B /* MemoryAllocatorTests.cpp */; };
-		336555FB2034DD88003EA851 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 336555FA2034DD88003EA851 /* main.cpp */; };
 		336556032034DE41003EA851 /* MyClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 336556022034DE41003EA851 /* MyClass.cpp */; };
 		336556062038F06F003EA851 /* Header.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 336556042038F06F003EA851 /* Header.cpp */; };
 		3365560C2039CB78003EA851 /* Allocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3365560A2039CB78003EA851 /* Allocator.cpp */; };
@@ -28,10 +30,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		331E40B3208057B9002B422A /* CustomCompare.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CustomCompare.cpp; sourceTree = "<group>"; };
+		331E40B4208057B9002B422A /* CustomCompare.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CustomCompare.hpp; sourceTree = "<group>"; };
+		331E40B620825359002B422A /* LargeClass.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LargeClass.cpp; sourceTree = "<group>"; };
+		331E40B720825359002B422A /* LargeClass.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LargeClass.hpp; sourceTree = "<group>"; };
+		332FEB2C206FD40D00C56BDD /* TestUtility.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TestUtility.cpp; sourceTree = "<group>"; };
+		332FEB2D206FD40D00C56BDD /* TestUtility.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestUtility.hpp; sourceTree = "<group>"; };
 		3330675E2053682900C6481B /* catch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = catch.hpp; sourceTree = "<group>"; };
 		3330675F2053686500C6481B /* MemoryAllocatorTests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MemoryAllocatorTests.cpp; sourceTree = "<group>"; };
 		336555F72034DD88003EA851 /* MemoryAllocator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MemoryAllocator; sourceTree = BUILT_PRODUCTS_DIR; };
-		336555FA2034DD88003EA851 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		336556012034DE41003EA851 /* MyClass.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MyClass.hpp; sourceTree = "<group>"; };
 		336556022034DE41003EA851 /* MyClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyClass.cpp; sourceTree = "<group>"; };
 		336556042038F06F003EA851 /* Header.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Header.cpp; sourceTree = "<group>"; };
@@ -56,8 +63,14 @@
 		3330675D205367F200C6481B /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				336556022034DE41003EA851 /* MyClass.cpp */,
+				336556012034DE41003EA851 /* MyClass.hpp */,
 				3330675E2053682900C6481B /* catch.hpp */,
 				3330675F2053686500C6481B /* MemoryAllocatorTests.cpp */,
+				332FEB2C206FD40D00C56BDD /* TestUtility.cpp */,
+				332FEB2D206FD40D00C56BDD /* TestUtility.hpp */,
+				331E40B620825359002B422A /* LargeClass.cpp */,
+				331E40B720825359002B422A /* LargeClass.hpp */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -82,15 +95,14 @@
 		336555F92034DD88003EA851 /* MemoryAllocator */ = {
 			isa = PBXGroup;
 			children = (
-				336556022034DE41003EA851 /* MyClass.cpp */,
-				336556012034DE41003EA851 /* MyClass.hpp */,
-				336555FA2034DD88003EA851 /* main.cpp */,
 				336556042038F06F003EA851 /* Header.cpp */,
 				336556052038F06F003EA851 /* Header.hpp */,
 				3365560A2039CB78003EA851 /* Allocator.cpp */,
 				3365560B2039CB78003EA851 /* Allocator.hpp */,
 				3365560D2040F059003EA851 /* FreeList.cpp */,
 				3365560E2040F059003EA851 /* FreeList.hpp */,
+				331E40B3208057B9002B422A /* CustomCompare.cpp */,
+				331E40B4208057B9002B422A /* CustomCompare.hpp */,
 			);
 			path = MemoryAllocator;
 			sourceTree = "<group>";
@@ -121,7 +133,7 @@
 		336555EF2034DD88003EA851 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Jieyang Qian";
 				TargetAttributes = {
 					336555F62034DD88003EA851 = {
@@ -152,11 +164,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				331E40B820825359002B422A /* LargeClass.cpp in Sources */,
+				331E40B5208057B9002B422A /* CustomCompare.cpp in Sources */,
 				336556062038F06F003EA851 /* Header.cpp in Sources */,
 				336556032034DE41003EA851 /* MyClass.cpp in Sources */,
 				333067602053686500C6481B /* MemoryAllocatorTests.cpp in Sources */,
+				332FEB2E206FD40D00C56BDD /* TestUtility.cpp in Sources */,
 				3365560F2040F059003EA851 /* FreeList.cpp in Sources */,
-				336555FB2034DD88003EA851 /* main.cpp in Sources */,
 				3365560C2039CB78003EA851 /* Allocator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,6 +192,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -185,6 +200,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -233,6 +249,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -240,6 +257,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

@@ -1,6 +1,6 @@
 //
 //  MyClass.h
-//  Pointer and Reference
+//  PoolAllocator
 //
 //  Created by Jieyang Qian on 2/12/18.
 //  Copyright © 2018 Jieyang Qian. All rights reserved.

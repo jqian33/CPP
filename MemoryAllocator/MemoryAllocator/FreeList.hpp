@@ -2,6 +2,9 @@
 //  FreeList.hpp
 //  MemoryAllocator
 //
+//  A list that will keep track of all free memory blocks.
+//  Top will return the largest block, and Pop will remove the largest block.
+//
 //  Created by Jieyang Qian on 2/23/18.
 //  Copyright © 2018 Jieyang Qian. All rights reserved.
 //
@@ -12,30 +15,35 @@
 #include <stdio.h>
 #include <set>
 #include "Header.hpp"
+#include "CustomCompare.hpp"
 
- //List of free memory blocks (Only contain pointers to memory block headers)
 class FreeList
 {
 public:
     // Initialize an emepty list
     FreeList();
-    // Add a free memory block to list
+    
+    // Push a free memory block to list
     void Push(Header *block);
+    
     // Check if list is empty
     bool Empty();
+    
     // Get largest memory block from list
     Header* Top();
+    
     // Get largest memory block from list and remove it from the list
     Header* Pop();
+    
     // Remove specific item
     void Remove(Header* target);
+    
     // Get list size;
     int Size();
     
 private:
-    std::multiset<Header*> list;
-    bool (FreeList::*fp) (Header*, Header*);
-    bool CompareSize(Header* a, Header* b);
+    std::multiset<Header*, CustomCompare> list;
+    //bool (FreeList::*fp) (const Header*, const Header*);
 };
 
 #endif /* FreeList_hpp */

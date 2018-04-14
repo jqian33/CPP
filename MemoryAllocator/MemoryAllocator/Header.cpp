@@ -8,7 +8,7 @@
 
 #include "Header.hpp"
 
-#include "Allocator.hpp"
+using namespace std;
 
 void Header::Initialize(size_t objectSize)
 {
@@ -20,12 +20,11 @@ void Header::Initialize(size_t objectSize)
 
 void* Header::operator new(size_t size)
 {
-    throw std::logic_error("Function not yet implemented");
+    throw logic_error("Invalid function call.");
 }
 
 void Header::operator delete(void* ptr)
 {
-    
 }
 
 Header* Header::GetNext()
@@ -44,6 +43,11 @@ Header* Header::GetPrev()
 }
 
 size_t Header::GetSize()
+{
+    return size;
+}
+
+const size_t Header::GetSize() const
 {
     return size;
 }
